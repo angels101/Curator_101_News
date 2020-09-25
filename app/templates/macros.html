@@ -1,0 +1,56 @@
+<!-- Displaying sources -->
+
+{% macro display_sources(source_list) %}
+<div class="container-fluid">
+    <div class="row">
+        {% for source in source_list %}
+        <div class="col-md-3">
+            <div class="card" style="background: black;opacity: 0.8;color:white;margin-left: 10px;margin-bottom: 10px;">
+                <div class="card-body">
+
+                    <h3 style="color: chartreuse;">{{source.name}}</h3>
+                    <p>{{source.description}}</p>
+                    <p>{{source.language}}</p>
+                    <p>{{source.country}}</p>
+                    <a class='btn btn-warning' href="/articles/{{source.id}}">View Articles</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</div>
+{% endmacro %}
+<!-- displaying articles -->
+
+
+{% macro display_source_articles(news_updates)%}
+<div class="container">
+    <table>
+      
+        <!-- <div class="row"> -->
+        {% for article in news_updates %}
+        <tr>
+       <td>
+
+            <!-- <h3>{{article.name}}</h3> -->
+            <p>{{article.author}}</p>
+            <p>{{article.title}}</p>
+            <img src="{{article.urlToImage}}" width="350px" height="240px">
+
+        </td>
+        <td style="transform:translate(20%,20%)">
+            <p>{{article.description}}</p>
+            <p>{{article.publishedAt|truncate(13)}}</p>
+            <p>{{article.content}}</p>
+            <a href="{{article.url}}"><button class="btn btn-info">View all</button></a>
+        </td>
+    </tr>
+        {% endfor %}
+    </div>
+
+    </table>
+
+
+{% endmacro %}
