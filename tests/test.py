@@ -1,5 +1,6 @@
-import unittest
-from models import news_source
+import  unittest
+from .models import news_source
+
 Source = news_source.Source
 
 class SourceTest(Unittest.TestCase):
@@ -17,4 +18,4 @@ class SourceTest(Unittest.TestCase):
 
     
 if __name__=='__main__':
-    unittest.main() 
+        unittest.main() 
