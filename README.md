@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Watchlist_using_Flask
-=======
 ###  Flask IP2  wk2/
 ##  Watchlist_using_Falsk
 
@@ -27,4 +24,3 @@ Git clone news-watchlist Make the necessary changes Run the tests. If everything
 
 ##   License (MIT License)
 This project is licensed under the MIT Open Source license, (c) angelscodex101
->>>>>>> development
