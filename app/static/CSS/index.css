@@ -23,11 +23,11 @@
   }
   .card:hover:before{
   transform: rotate(20deg);
-  box-shadow: 0 4px 20px rgba(7, 3, 3, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 24, 78, 0.904);
   }
   .card:hover:after{
   transform: rotate(10deg);
-  box-shadow: 0 4px 20px rgba(7, 3, 3, 0.2);
+  box-shadow: 0 4px 20px rgba(112, 25, 25, 0.2);
   }
   .card .imgBx{
   position: absolute;
@@ -35,7 +35,7 @@
   left: 10px;
   bottom: 10px;
   right: 10px;
-  background: #222;
+  background: rgb(1, 104, 26);
   transition: 0.5s;
   z-index: 1;
   }
