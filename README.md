@@ -1,13 +1,13 @@
 ###  Flask IP2  wk2/
-##  Watchlist_using_Falsk
+##  Curator_Watchlist_using_Falsk
 
-## News Watch list
+## Curator News NewsHighlight list
 All You Need To Know About Everything That Matters
 ### Author
 Arthur
 
 ### Description
-News Watchlight mainly focuses on offering commentary and analysis of the day's breaking news and current events as well as arts, entertainment, people and gossip, and political.
+Curator mainly focuses on offering commentary and analysis of the day's breaking news and current events as well as arts, entertainment, people and gossip, and political.
 
 ### Prerequisites
 Python3.6 Virtual environment, run the following command to install python3.6 -m venv --without-pip venv How to run the app Please run the following command on your terminal on linux to clone our project:
