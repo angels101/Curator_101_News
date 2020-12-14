@@ -1,5 +1,7 @@
+from ssl import VERIFY_CRL_CHECK_CHAIN
 import urllib.request,json
 from .models import Source,Articles
+
 
 
 api_key = None
@@ -10,7 +12,9 @@ def configure_request(app):
     api_key = app.config['NEWS_API_KEY']
     base_url = app.config['BASE_URL']
     articles_base_url= app.config['ARTICLES_BASE_URL']
-
+    
+    client = vonage.Client(key=VONAGE_API_KEY, secret=VONAGE_API_SECRET)
+    verify = vonage.Verify(client)
 
 def get_sources(category):
     '''
@@ -89,3 +93,36 @@ def process_articles_results(news_updates):
         news_results.append(new_article)
     return news_results
 
+response = client.start_verification(
+  number="254714796130",
+  brand="Vonage",
+  code_length="4")
+
+if response["status"] == "0":
+  print("Started verification request_id is %s" % (response["request_id"]))
+else:
+  print("Error: %s" % response["error_text"])
+
+
+response = client.cancel_verification("REQUEST_ID")
+
+if response["status"] == "0":
+  print("Cancellation successful")
+else:
+  print("Error: %s" % response["error_text"])
+
+
+request_id = "REQUEST_ID"
+response = client.check_verification(request_id, code="CODE")
+
+if response["status"] == "0":
+  print("Verification successful, event_id is %s" % (response["event_id"]))
+else:
+  print("Error: %s" % response["error_text"])
+
+response = VERIFY_CRL_CHECK_CHAIN.start_verification(number=RECIPIENT_NUMBER, brand="AcmeInc")
+
+if response["status"] == "0":
+    print("Started verification request_id is %s" % (response["request_id"]))
+else:
+    print("Error: %s" % response["error_text"])

@@ -1,4 +1,5 @@
 import os
+import nexmo
 class Config:
     '''
     This is the parent configuration class
@@ -6,8 +7,7 @@ class Config:
     NEWS_API_KEY='6edb7b566bad48f689bcc51c050f1db7'
     BASE_URL = "https://newsapi.org/v2/sources?q={}&apiKey={}"
     ARTICLES_BASE_URL='https://newsapi.org/v2/everything?sources={}&apikey={}'
-    
-
+    client = nexmo.Client(key='91cb2e45', secret='JayoOHih2gUwGMkB')
 
 class ProdConfig(Config):
     '''
